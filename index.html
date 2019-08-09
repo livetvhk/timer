@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Countdown</title>
+</head>
+<body>
+<script>
+var timeleft = 11;
+var downloadTimer = setInterval(function(){
+  document.getElementById("progressBar").value = 11 - timeleft;
+  timeleft -= 1;
+  if(timeleft <= 0)
+    {clearInterval(downloadTimer);
+    window.close();}
+    }, 1000);
+</script>
+
+<div>
+Remaining time:
+</div>
+<progress value="0" max="9" id="progressBar"></progress>
+</body>
+</html>
